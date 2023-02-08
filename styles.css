@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+p {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  color: inherit;
+  width: auto;
+  height: auto;
+  font-size: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+a:visited {
+  font-weight: 400;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  font-family: "Mulish";
+  line-height: 1.4;
+  color: #121212;
+}
+@media (max-width: 767px) {
+  body {
+    font-size: calc(
+      15px + 8.5 * ((100vw - 320px) / 1440)
+    );
+  }
+}
+@media (min-width: 767px) {
+  body {
+    font-size: calc(15px + 5 * (100vw / 1440));
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Manrope";
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: calc(
+      40px + 34 * ((100vw - 320px) / 1440)
+    );
+  }
+}
+@media (min-width: 767px) {
+  h1 {
+    font-size: calc(40px + 20 * (100vw / 1440));
+  }
+}
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: calc(
+      30px + 34 * ((100vw - 320px) / 1440)
+    );
+  }
+}
+@media (min-width: 767px) {
+  h2 {
+    font-size: calc(30px + 20 * (100vw / 1440));
+  }
+}
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
+h3 {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: calc(
+      24px + 13.6 * ((100vw - 320px) / 1440)
+    );
+  }
+}
+@media (min-width: 767px) {
+  h3 {
+    font-size: calc(24px + 8 * (100vw / 1440));
+  }
+}
+@media (min-width: 1440px) {
+  h3 {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+[class*=__container] {
+  max-width: 1270px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 100px;
+}
+
+.section-descrp {
+  color: rgba(18, 18, 18, 0.6);
+}
+
+.button {
+  transition: 0.7s ease;
+  text-align: center;
+  box-shadow: 0px 15px 30px -9px rgba(18, 18, 18, 0.36);
+  border-radius: 29px;
+  display: inline-block;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #121212;
+  padding: 10px 10px;
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-images__item {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+.grid-images__item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header__container {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__item {
+  transition: ease 0.7s;
+  color: rgba(18, 18, 18, 0.6);
+  font-size: 18px;
+}
+.nav__item:hover {
+  color: #121212;
+}
+
+.intro__container {
+  padding: 40px 15px 60px 15px;
+}
+
+.intro__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.intro__title {
+  flex: 0 1 800px;
+}
+
+.intro__block-text {
+  flex: 0 1 400px;
+}
+
+.intro__descrp {
+  margin-bottom: 28px;
+}
+
+.intro__button {
+  width: 174px;
+}/*# sourceMappingURL=styles.css.map */
