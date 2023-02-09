@@ -1,0 +1,19 @@
+@media (max-width: 996px) {
+  .grid-images {
+    grid-template-areas:
+      "item-1 item-2"
+      "item-3 item-4";
+    grid-template-rows: 214px 214px;
+  }
+}
+
+@media (max-width: 761px) {
+  .grid-images {
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-3"
+      "item-4";
+    grid-template-rows: repeat(4, 250px);
+  }
+}

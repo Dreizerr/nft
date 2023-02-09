@@ -239,36 +239,6 @@ h4 {
   padding: 10px 10px;
 }
 
-.grid-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 272px 199px;
-  gap: 20px;
-}
-
-.grid-images__item {
-  padding: 20px;
-  background: #f5f5f5;
-  border-radius: 10px;
-}
-.grid-images__item img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.grid-images__item--medium {
-  grid-column: 1/3;
-  grid-row: 1/1;
-}
-
-.grid-images__item--big {
-  grid-column: 3/3;
-  grid-row: 1/3;
-}
-
 .header {
   position: absolute;
   width: 100%;
@@ -330,7 +300,77 @@ h4 {
   width: 174px;
 }
 
-.intro__images-item--medium img {
-  -o-object-position: 0px -60px;
-     object-position: 0px -60px;
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 272px 199px;
+  grid-template-areas: "item-1 item-1 item-4" "item-2 item-3 item-4";
+  gap: 20px;
+}
+
+[class*=grid-images__item] {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+[class*=grid-images__item] img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-images__item-1 {
+  grid-area: item-1;
+}
+
+.grid-images__item-2 {
+  grid-area: item-2;
+}
+
+.grid-images__item-3 {
+  grid-area: item-3;
+}
+
+.grid-images__item-4 {
+  grid-area: item-4;
+}
+
+.social-proof__artists {
+  display: flex;
+}
+
+.social-proof__block-images {
+  display: flex;
+}
+
+[class*=social-proof__img] {
+  border: 7px solid #ffffff;
+  border-radius: 50%;
+}
+
+.social-proof__img-2 {
+  margin-left: -50px;
+}
+
+.social-proof__img-3 {
+  margin-left: -50px;
+}
+
+.social-proof__img-4 {
+  margin-left: -50px;
+}
+
+@media (max-width: 996px) {
+  .grid-images {
+    grid-template-areas: "item-1 item-2" "item-3 item-4";
+    grid-template-rows: 214px 214px;
+  }
+}
+@media (max-width: 761px) {
+  .grid-images {
+    grid-template-areas: "item-1" "item-2" "item-3" "item-4";
+    grid-template-rows: repeat(4, 250px);
+  }
 }/*# sourceMappingURL=styles.css.map */
