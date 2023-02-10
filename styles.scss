@@ -1,6 +1,5 @@
 @import "_nullstyle";
 @import "_generals";
-
 //----------------------------------- header
 
 .header {
@@ -76,6 +75,7 @@
     "item-1 item-1 item-4"
     "item-2 item-3 item-4";
   gap: 20px;
+  margin-bottom: 50px;
 }
 
 [class*="grid-images__item"] {
@@ -104,13 +104,18 @@
 }
 
 .social-proof {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .social-proof__artists {
   display: flex;
-}
-
-.social-proof__text {
+  align-items: center;
+  gap: 20px;
 }
 
 .social-proof__block-images {
@@ -122,8 +127,6 @@
   border-radius: 50%;
 }
 
-.social-proof__img-1 {
-}
 .social-proof__img-2 {
   margin-left: -50px;
 }
@@ -136,6 +139,9 @@
 }
 
 .social-proof__stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 //-------------------------------------------------- MEDIA
