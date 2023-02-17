@@ -223,7 +223,10 @@ h4 {
   margin-top: 100px;
 }
 
-.section-title--margb {
+.section-header {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
   margin-bottom: 52px;
 }
 
@@ -251,6 +254,136 @@ h4 {
 
 .stats__text {
   color: rgba(18, 18, 18, 0.6);
+}
+
+.card-nft {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  gap: 30px;
+}
+
+.card-nft__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-nft__block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-nft__title {
+  margin-bottom: 15px;
+}
+
+.card-nft__block-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.card-nft__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-nft__author-block-img {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.card-nft__author-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-nft__author-name:hover {
+  text-decoration: underline;
+}
+
+.card-nft__info-button {
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.card-nft__info-button:hover .card-nft__dot {
+  background-color: #121212;
+}
+
+.card-nft__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(18, 18, 18, 0.4);
+}
+
+.card-nft__block-time-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-nft__time-title {
+  font-size: 16px;
+  color: rgba(18, 18, 18, 0.6);
+}
+
+.card-nft__time {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nft-block-price__title {
+  color: rgba(18, 18, 18, 0.6);
+  font-size: 16px;
+}
+
+.nft-block-price__price {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.nft-block-price__price::before {
+  content: "";
+  background: url(images/ETH.png);
+  width: 23px;
+  height: 23px;
+}
+
+.card-nft__progressbar {
+  position: relative;
+  transition: ease-in-out 1s;
+  width: 100%;
+  background: #e5e5e5;
+  border-radius: 50px;
+  height: 11px;
+  margin-bottom: 4px;
+}
+
+.card-nft__progress-line {
+  transition: ease-in-out 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 50px;
+  background: linear-gradient(90.15deg, #121212 0%, rgba(79, 79, 79, 0.45) 141.67%);
 }
 
 .header {
@@ -316,7 +449,7 @@ h4 {
 
 .grid-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 272px 199px;
   grid-template-areas: "item-1 item-1 item-4" "item-2 item-3 item-4";
   gap: 20px;
@@ -394,15 +527,67 @@ h4 {
   gap: 20px;
 }
 
+.trending__card {
+  overflow: hidden;
+  max-height: 582px;
+  padding: 20px;
+}
+
+.trending__container {
+  padding: 100px 15px;
+}
+
+.trending__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trending__card {
+  width: 100%;
+  max-width: 400px;
+}
+.trending__card:hover .trending__card-block-img {
+  min-height: 202px;
+  max-height: 202px;
+}
+.trending__card:hover .trending__card-button {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.trending__card-block-img {
+  transition: ease 0.7s;
+  min-height: 280px;
+  max-height: 280px;
+}
+
+.trending__card-button {
+  opacity: 0;
+  padding: 15px 10px;
+  font-size: 18px;
+}
+
+.artists__container {
+  padding: 100px 15px;
+}
+
+.artists__header {
+  text-align: center;
+  margin: 0 auto 54px auto;
+  align-items: center;
+}
+
 @media (max-width: 996px) {
   .grid-images {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "item-1 item-2" "item-3 item-4";
-    grid-template-rows: 214px 214px;
+    grid-template-rows: 250px 250px;
   }
 }
 @media (max-width: 761px) {
   .grid-images {
+    grid-template-columns: 1fr;
     grid-template-areas: "item-1" "item-2" "item-3" "item-4";
-    grid-template-rows: repeat(4, 250px);
+    grid-template-rows: repeat(4, 214px);
   }
 }/*# sourceMappingURL=styles.css.map */

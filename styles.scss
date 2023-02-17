@@ -69,7 +69,7 @@
 
 .grid-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 272px 199px;
   grid-template-areas:
     "item-1 item-1 item-4"
@@ -142,6 +142,64 @@
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+// -------------------------- trending
+
+.trending__card {
+  overflow: hidden;
+  max-height: 582px;
+  padding: 20px;
+}
+
+.trending__container {
+  padding: 100px 15px;
+}
+
+.trending__cards {
+  display: flex;
+  justify-content: space-between;
+  // gap: 20px;
+  // flex-wrap: wrap;
+}
+
+.trending__card {
+  width: 100%;
+  max-width: 400px;
+  &:hover {
+    .trending__card-block-img {
+      min-height: 202px;
+      max-height: 202px;
+    }
+    .trending__card-button {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.trending__card-block-img {
+  transition: ease 0.7s;
+  min-height: 280px;
+  max-height: 280px;
+}
+
+.trending__card-button {
+  opacity: 0;
+  padding: 15px 10px;
+  font-size: 18px;
+}
+
+// ------------------- artists
+
+.artists__container {
+  padding: 100px 15px;
+}
+
+.artists__header {
+  text-align: center;
+  margin: 0 auto 54px auto;
+  align-items: center;
 }
 
 //-------------------------------------------------- MEDIA

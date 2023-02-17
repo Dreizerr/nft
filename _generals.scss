@@ -49,7 +49,10 @@ h4 {
   margin-top: $headerHeight;
 }
 
-.section-title--margb {
+.section-header {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
   margin-bottom: 52px;
 }
 
@@ -82,4 +85,142 @@ h4 {
 
 .stats__text {
   color: $lightGray;
+}
+
+//------ nft
+
+.card-nft {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  gap: 30px;
+}
+
+.card-nft__block-img {
+}
+
+.card-nft__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-nft__block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-nft__title {
+  margin-bottom: 15px;
+}
+
+.card-nft__block-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.card-nft__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-nft__author-block-img {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.card-nft__author-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-nft__author-name {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.card-nft__info-button {
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  &:hover {
+    .card-nft__dot {
+      background-color: $black;
+    }
+  }
+}
+
+.card-nft__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(18, 18, 18, 0.4);
+}
+
+.card-nft__block-time-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-nft__time-title {
+  font-size: 16px;
+  color: $lightGray;
+}
+
+.card-nft__time {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nft-block-price__title {
+  color: $lightGray;
+  font-size: 16px;
+}
+
+.nft-block-price__price {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 24px;
+  font-weight: 700;
+  &::before {
+    content: "";
+    background: url(images/ETH.png);
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.card-nft__progressbar {
+  position: relative;
+  transition: ease-in-out 1s;
+  // display: none;
+  width: 100%;
+  background: #e5e5e5;
+  border-radius: 50px;
+  height: 11px;
+  margin-bottom: 4px;
+}
+
+.card-nft__progress-line {
+  transition: ease-in-out 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 50px;
+  background: linear-gradient(90.15deg, #121212 0%, rgba(79, 79, 79, 0.45) 141.67%);
 }
