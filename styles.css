@@ -674,11 +674,24 @@ h4 {
 .auction__body {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
 }
 
 .auction__block-content {
   display: flex;
   flex-direction: column;
+}
+
+.auction__content-title {
+  margin-bottom: 40px;
+}
+
+.auction__wrapper {
+  display: grid;
+  grid-template-columns: 190px 190px;
+  justify-content: space-between;
+  grid-row-gap: 43px;
+  max-width: 505px;
 }
 
 .auction__block-info {
@@ -771,8 +784,15 @@ h4 {
 
 .auction__block-img {
   border-radius: 10px;
-  background: url(images/auctionImg.png) no-repeat;
+  background: url(images/auctionImg.png) no-repeat center;
   background-size: cover;
+}
+
+.auction__button {
+  font-size: 18px;
+  border-radius: 55px;
+  padding: 23px 15px;
+  grid-column: span 2;
 }
 
 @media (max-width: 996px) {
