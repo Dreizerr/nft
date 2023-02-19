@@ -179,6 +179,8 @@
 }
 
 .trending__card-block-img {
+  border-radius: 10px;
+  overflow: hidden;
   transition: ease 0.7s;
   min-height: 280px;
   max-height: 280px;
@@ -204,15 +206,45 @@
 
 .artists__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, 576px);
 }
+
 .artists__card {
-  max-width: 576px;
   padding: 20px;
   background: $whiteCards;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 40px;
   border-radius: 10px;
+}
+
+.artists__card--big {
+  grid-row: span 3;
+}
+
+.artists__card-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.artists__card-block-big-img {
+  box-shadow: 0px 30px 60px -15px rgba(18, 18, 18, 0.3);
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 30%;
+  flex: 0 1 75%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .artists__card-block-img {
@@ -230,10 +262,7 @@
   flex-direction: column;
   gap: 15px;
 }
-.artists__block-price {
-}
-.nft-block-price {
-}
+
 .artists__current-price {
   font-size: 20px;
   font-weight: 400;
@@ -251,6 +280,115 @@
 }
 .artists__floor-price-price {
   font-size: 16px;
+}
+
+// ------------- auction
+
+.auction {
+}
+
+.auction__container {
+  padding: 100px 15px;
+}
+
+.auction__header {
+  text-align: center;
+  align-items: center;
+}
+.auction__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.auction__block-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.auction__block-info {
+  display: flex;
+}
+
+.auction__block-bid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auction__bid-title {
+  font-size: 20px;
+}
+
+.auction__bid-price {
+  font-size: 32px;
+}
+
+.auction__block-time-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auction__time-left-title {
+  color: $lightGray;
+  font-size: 20px;
+}
+.auction__time-left {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.auction__author-info {
+  display: flex;
+}
+
+.auction__block-author {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auction__author-title {
+  color: $lightGray;
+}
+.auction__author {
+  color: $lightGray;
+}
+
+.auction__author-collection-block-img {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.auction__block-collection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auction__collection-title {
+  color: $lightGray;
+}
+.auction__collection {
+  color: $lightGray;
+}
+
+.auction__author-collection--bg-gray {
+  background-color: $whiteCards;
+  border-radius: 5px;
+  padding: 11px 20px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.auction__block-img {
+  border-radius: 10px;
+  background: url(images/auctionImg.png) no-repeat;
+  background-size: cover;
 }
 
 //-------------------------------------------------- MEDIA
