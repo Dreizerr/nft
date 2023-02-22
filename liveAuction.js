@@ -23,4 +23,4 @@ let auctionTimer2 = auctionTimer();
 
 auctionTimer2();
 
-let auctionTimerInterval = setInterval(auctionTimer2, 1000);
+let auctionTimerInterval = setInterval(auctionTimer2, 1000);  

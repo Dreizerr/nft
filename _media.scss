@@ -7,9 +7,21 @@
       "item-3 item-4";
     grid-template-rows: 250px 250px;
   }
+
+  .auction__block-content {
+    justify-self: center;
+    grid-column: span 2;
+  }
+  .auction__content-title {
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 761px) {
+  .intro__header {
+    flex-wrap: wrap;
+  }
+
   .grid-images {
     grid-template-columns: 1fr;
 
