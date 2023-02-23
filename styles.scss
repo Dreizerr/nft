@@ -408,8 +408,6 @@
   margin-bottom: 45px;
 }
 
-.tabs {
-}
 .tabs__links {
   // overflow: scroll;
   padding: 10px;
@@ -421,6 +419,7 @@
   // gap: 48px;
   width: 100%;
   height: 86px;
+  margin-bottom: 44px;
 }
 .tabs__link {
   cursor: pointer;
@@ -445,6 +444,46 @@
     background-color: $black;
     color: $white;
   }
+}
+
+.tabs__card {
+  max-width: 295px;
+  gap: 0px;
+}
+
+.tabs__card-block-img {
+  overflow: hidden;
+  width: 100%;
+  height: 204px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.tabs__card-block-content {
+  padding: 20px 16px 16px 16px;
+}
+
+.tabs__card-author {
+  font-size: 16px;
+}
+
+.tabs__card-author-block-img {
+  width: 38px;
+  height: 38px;
+}
+
+.tabs__card-author-name {
+  font-weight: 500;
+}
+
+.tabs__card-price-title {
+  font-size: 12px;
+}
+
+.tabs__card-price {
+  font-size: 18px;
+}
+
+.tabs__card-button {
 }
 
 //-------------------------------------------------- MEDIA
