@@ -878,12 +878,35 @@ h4 {
   font-weight: 500;
 }
 
+.tabs__card-block-price {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
 .tabs__card-price-title {
   font-size: 12px;
 }
 
 .tabs__card-price {
   font-size: 18px;
+}
+
+.tabs__card-price-likes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-likes {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.block-likes__number {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(18, 18, 18, 0.6);
 }
 
 @media (max-width: 996px) {

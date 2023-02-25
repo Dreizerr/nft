@@ -475,6 +475,12 @@
   font-weight: 500;
 }
 
+.tabs__card-block-price {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
 .tabs__card-price-title {
   font-size: 12px;
 }
@@ -484,6 +490,26 @@
 }
 
 .tabs__card-button {
+}
+
+.tabs__card-price-likes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-likes {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.block-likes__number {
+  font-size: 12px;
+  font-weight: 500;
+  color: $lightGray;
+}
+
+.block-likes__like {
 }
 
 //-------------------------------------------------- MEDIA
