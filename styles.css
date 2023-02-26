@@ -240,7 +240,9 @@ h4 {
   text-align: center;
   box-shadow: 0px 15px 30px -9px rgba(18, 18, 18, 0.36);
   border-radius: 29px;
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   font-size: 14px;
   color: #ffffff;
   background-color: #121212;
@@ -258,7 +260,9 @@ h4 {
   transition: 0.7s ease;
   text-align: center;
   background-color: transparent;
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   font-size: 14px;
   padding: 10px;
 }
@@ -849,16 +853,17 @@ h4 {
 }
 
 .tabs__link {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  padding: 20px 0px;
   white-space: nowrap;
   cursor: pointer;
-  transition: ease 0.7s;
+  transition: ease 0.5s;
   text-align: center;
-  border-radius: 50px;
+  border-radius: 30px;
   display: inline-block;
   color: rgba(18, 18, 18, 0.6);
+}
+.tabs__link:nth-child(1) {
+  padding-left: 20px;
 }
 .tabs__link.active {
   padding: 20px 40px;
@@ -867,6 +872,8 @@ h4 {
 }
 
 .tabs__cards {
+  min-height: 475px;
+  transition: ease 0.7s;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(295px, 295px));
   justify-content: center;
@@ -875,7 +882,14 @@ h4 {
 }
 
 .tabs__card {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: ease 0.7s;
   gap: 0px;
+}
+.tabs__card.visible {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .tabs__card-block-img {
@@ -923,6 +937,12 @@ h4 {
 
 .tabs__card-block-likes {
   align-self: flex-end;
+}
+
+.category__button {
+  width: 190px;
+  height: 47px;
+  margin: 44px auto 0px auto;
 }
 
 @media (max-width: 996px) {

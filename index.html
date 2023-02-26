@@ -327,17 +327,17 @@
           </header>
           <div class="category__tabs tabs">
             <div class="tabs__links">
-              <span data-cateegory="all" class="tabs__link active">All Categories</span>
-              <span data-cateegory="collectibles" class="tabs__link">Collectibles</span>
-              <span data-cateegory="art" class="tabs__link">Art</span>
-              <span data-cateegory="photos" class="tabs__link">Photography</span>
-              <span data-cateegory="utility" class="tabs__link">Utility</span>
-              <span data-cateegory="domain" class="tabs__link">Domain Names</span>
-              <span data-cateegory="meta" class="tabs__link">Metaverse</span>
-              <span data-cateegory="games" class="tabs__link">Games</span>
+              <span data-category="all" class="tabs__link active">All Categories</span>
+              <span data-category="collectibles" class="tabs__link">Collectibles</span>
+              <span data-category="art" class="tabs__link">Art</span>
+              <span data-category="photos" class="tabs__link">Photography</span>
+              <span data-category="utility" class="tabs__link">Utility</span>
+              <span data-category="domain" class="tabs__link">Domain Names</span>
+              <span data-category="meta" class="tabs__link">Metaverse</span>
+              <span data-category="games" class="tabs__link">Games</span>
             </div>
-            <div class="tabs__cards">
-              <div class="tabs__card card-nft">
+            <div data-category="all" class="tabs__cards">
+              <div data-category="all collectibles photos" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img
                     style="object-position: top -90px left 0px"
@@ -373,7 +373,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all art games" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/GlowBall.png" alt="" />
                 </div>
@@ -405,7 +405,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all photos domain meta" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/MindHole.png" alt="" />
                 </div>
@@ -437,7 +437,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all utility art" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/Steel.png" alt="" />
                 </div>
@@ -469,7 +469,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all domain games" data-category="all photos" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/phrism.png" alt="" />
                 </div>
@@ -501,7 +501,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all meta art" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/CuteKiller.png" alt="" />
                 </div>
@@ -533,7 +533,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all games collectibles " class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/Chair.png" alt="" />
                 </div>
@@ -565,7 +565,7 @@
                   <a class="tabs__card-button card-nft__button button-t" href="">Place a Bid</a>
                 </div>
               </div>
-              <div class="tabs__card card-nft">
+              <div data-category="all photos" class="tabs__card card-nft">
                 <div class="tabs__card-block-img card-nft__block-img">
                   <img class="card-nft__img" src="images/TrapAstro.png" alt="" />
                 </div>
@@ -598,9 +598,11 @@
                 </div>
               </div>
             </div>
+            <a class="category__button button-t" href="">View More</a>
           </div>
         </div>
       </section>
+      <section class=""></section>
     </main>
     <script src="trending.js"></script>
     <script src="liveAuction.js"></script>
