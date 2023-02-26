@@ -93,6 +93,24 @@ h4 {
   }
 }
 
+// likes
+
+.block-likes {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.block-likes__number {
+  font-size: 12px;
+  font-weight: 500;
+  color: $lightGray;
+}
+
+.block-likes__like {
+  cursor: pointer;
+}
+
 // stats
 
 .stats__item {
