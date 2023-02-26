@@ -431,7 +431,7 @@
   cursor: pointer;
   transition: ease 0.5s;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 50px;
   display: inline-block;
   color: $lightGray;
 
@@ -462,7 +462,7 @@
   transition: ease 0.7s;
   gap: 0px;
   &.visible {
-    transform: translate(0, 0); 
+    transform: translate(0, 0);
     opacity: 1;
   }
 }
