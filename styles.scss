@@ -297,6 +297,7 @@
 
 .auction__block-flex {
   display: flex;
+  // display: none;
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
@@ -308,8 +309,9 @@
 
 .auction__wrapper {
   display: grid;
-  grid-template-columns: 190px 190px;
+  grid-template-columns: repeat(auto-fill, 190px);
   justify-content: space-between;
+  grid-column-gap: 20px;
   grid-row-gap: 43px;
   max-width: 505px;
 }
@@ -381,6 +383,7 @@
 }
 
 .auction__button {
+  width: 100%;
   font-size: 18px;
   border-radius: 55px;
   padding: 23px 15px;
@@ -413,6 +416,7 @@
 }
 
 .tabs__link {
+  user-select: none;
   padding: 20px 0px;
   white-space: nowrap;
   cursor: pointer;
@@ -437,7 +441,7 @@
   min-height: 475px;
   transition: ease 0.7s;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 295px));
+  grid-template-columns: repeat(auto-fit, 295px);
   justify-content: center;
   grid-row-gap: 24px;
   grid-column-gap: 20px;
