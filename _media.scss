@@ -22,6 +22,9 @@
 }
 
 @media (max-width: 761px) {
+  .nav {
+    display: none;
+  }
   .intro__header {
     flex-wrap: wrap;
   }
