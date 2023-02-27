@@ -7,6 +7,9 @@ let tabsContainer = document.querySelector(".tabs__cards");
 tabsLinks.forEach((elem, index) => elem.addEventListener("click", tabsLinkClicked));
 
 function tabsLinkClicked(e) {
+  if (e.target.classList.contains("active")) {
+    return;
+  }
   tabsLinks.forEach((elem, index) => {
     if (elem.classList.contains("active")) {
       elem.classList.remove("active");
