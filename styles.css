@@ -745,7 +745,6 @@ h4 {
   justify-content: space-between;
   grid-column-gap: 20px;
   grid-row-gap: 43px;
-  max-width: 505px;
 }
 
 .auction__bid-title {
@@ -824,7 +823,7 @@ h4 {
   font-size: 18px;
   border-radius: 55px;
   padding: 23px 15px;
-  grid-column: span 2;
+  margin-top: 45px;
 }
 
 .category__header {
@@ -1067,5 +1066,10 @@ h4 {
   }
   .artists {
     display: none;
+  }
+}
+@media (max-width: 430px) {
+  .auction__wrapper {
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=styles.css.map */
