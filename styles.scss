@@ -16,10 +16,6 @@
   justify-content: space-between;
   align-items: center;
 }
-.header__logo {
-  font-weight: 700;
-  font-size: 28px;
-}
 
 .nav__list {
   display: flex;
@@ -29,10 +25,10 @@
 
 .nav__item {
   transition: ease 0.7s;
-  color: $lightGray;
+  color: var(--second-text-color);
   font-size: 18px;
   &:hover {
-    color: $black;
+    color: var(--black-to-white);
   }
 }
 
@@ -83,6 +79,7 @@
 [class*="grid-images__item"] {
   padding: 20px;
   background: $whiteCards;
+
   border-radius: 10px;
   img {
     border-radius: 10px;
@@ -125,7 +122,7 @@
 }
 
 [class*="social-proof__img"] {
-  border: 7px solid $white;
+  border: 7px solid var(--white-to-black);
   border-radius: 50%;
 }
 
@@ -207,7 +204,8 @@
 
 .artists__card {
   padding: 20px;
-  background: $whiteCards;
+  background: var(--cards-bg-color);
+
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -268,7 +266,7 @@
   display: flex;
   gap: 7px;
   align-items: center;
-  color: $lightGray;
+  color: var(--second-text-color);
   font-weight: 500;
 }
 .artists__floor-price-title {
@@ -324,7 +322,7 @@
 }
 
 .auction__time-left-title {
-  color: $lightGray;
+  color: var(--second-text-color);
   font-size: 20px;
 }
 .auction__time-left {
@@ -333,10 +331,10 @@
 }
 
 .auction__author-title {
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 .auction__author {
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 
 .auction__author-collection-block-img {
@@ -352,14 +350,14 @@
 }
 
 .auction__collection-title {
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 .auction__collection {
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 
-.auction__author-collection--bg-gray {
-  background-color: $whiteCards;
+.auction__author-collection--bg-card {
+  background-color: var(--cards-bg-color);
   border-radius: 5px;
   padding: 11px 20px;
   display: inline-flex;
@@ -389,7 +387,7 @@
   margin-top: 45px;
 }
 
-// ------------------------------ category
+// ------------------------------ category ----------------- Найс назвал дуралей
 
 .category__header {
   text-align: center;
@@ -400,7 +398,7 @@
 .tabs__links {
   overflow: auto;
   padding: 10px;
-  background-color: $whiteCards;
+  background-color: var(--cards-bg-color);
   border-radius: 55px;
   display: flex;
   align-items: center;
@@ -419,11 +417,11 @@
   padding: 20px 0px;
   white-space: nowrap;
   cursor: pointer;
-  transition: ease 0.5s;
+  transition: ease 0.7s;
   text-align: center;
   border-radius: 50px;
   display: inline-block;
-  color: $lightGray;
+  color: var(--second-text-color);
 
   &:nth-child(1) {
     padding-left: 20px;
@@ -530,7 +528,7 @@
 
 .article__block-img {
   padding: 20px;
-  background-color: $whiteCards;
+  background-color: var(--cards-bg-color);
   width: 100%;
   height: 345px;
   border-radius: 15px;
@@ -555,7 +553,7 @@
 }
 
 .article__descrp {
-  color: $lightGray;
+  color: var(--second-text-color);
   line-height: 1.5;
   overflow: hidden;
   display: -webkit-box;
@@ -598,6 +596,125 @@
 
 .articles__button {
   margin-top: 75px;
+}
+
+// ------------------------ join
+
+// .join {
+// }
+// .join__container {
+// }
+
+.join__wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.join__content {
+  max-width: 505px;
+}
+
+.join__block-content {
+  padding: 93px 20px 100px 85px;
+  background-color: var(--cards-bg-color);
+}
+
+.join__header {
+  margin-bottom: 36px;
+}
+.join__title {
+  max-width: 440px;
+}
+
+.join__button {
+  padding: 13px;
+  max-width: 190px;
+}
+
+.join__block-img {
+  background: url(images/join.png) no-repeat center;
+  background-size: cover;
+}
+
+.join__socials {
+  margin-top: 37px;
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.socials__link {
+  width: 32px;
+  height: 32px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// ---------------------------------------- footer
+
+.footer {
+  font-size: 16px;
+}
+
+.footer__container {
+  padding: 70px 15px;
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 103px;
+}
+
+.footer__header {
+  max-width: 350px;
+  gap: 28px;
+  margin: 0;
+}
+
+.footer__descrp {
+  font-size: 20px;
+}
+
+.footer__button {
+  padding: 13px;
+  width: 170px;
+}
+
+.footer__item-title {
+  margin-bottom: 28px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.footer__list-item {
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__terms {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 //-------------------------------------------------- MEDIA

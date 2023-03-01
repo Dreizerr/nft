@@ -19,6 +19,10 @@
   .articles__items {
     grid-template-columns: 1fr;
   }
+
+  .join__block-content {
+    padding-left: 30px;
+  }
 }
 
 @media (max-width: 761px) {
@@ -41,6 +45,22 @@
   }
 
   .artists {
+    display: none;
+  }
+
+  .join__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .join__block-content {
+    padding: 35px 20px 35px 20px;
+  }
+
+  .join__content {
+    margin: 0 auto;
+  }
+
+  .join__block-img {
     display: none;
   }
 }

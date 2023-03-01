@@ -2,11 +2,60 @@
 @import "_variables";
 @import "_templates";
 
+:root {
+  --second-text-color: rgba(18, 18, 18, 0.6);
+  --white-to-black: #ffffff;
+  --black-to-white: #121212;
+  --cards-bg-color: #f5f5f5;
+}
+
 body {
+  transition: ease 0.7s;
   @include adaptive-font(20, 15);
+  background-color: var(--white-to-black);
   font-family: "Mulish";
   line-height: 1.4;
-  color: $black;
+  color: var(--black-to-white);
+}
+
+body.dark-theme {
+  --main-text-color: #ffffff;
+  --white-to-black: #121212;
+  --black-to-white: #ffffff;
+  --second-text-color: rgba(255, 255, 255, 0.6);
+  --cards-bg-color: #26252c;
+  .button {
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .button-t {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .card-nft__progress-line {
+    background: linear-gradient(90.15deg, #c4c4c4 0%, rgba(79, 79, 79, 0.45) 141.67%);
+  }
+
+  .card-nft__dot {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .block-likes__like {
+    filter: invert(100%);
+  }
+
+  .article__viewers {
+    &::before {
+      filter: invert(100%);
+    }
+  }
+
+  .article__published {
+    &::before {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
 }
 
 h1,
@@ -39,10 +88,73 @@ h4 {
   font-size: 24px;
 }
 
+h5 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
 [class*="__container"] {
   max-width: 1270px;
   padding: 100px 15px;
   margin: 0 auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.switch-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-toggle__slider-round {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-to-white);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch-toggle__slider-round::before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--white-to-black);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .switch-toggle__slider-round {
+  background-color: var(--black-to-white);
+}
+
+input:focus + .switch-toggle__slider-round {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .switch-toggle__slider-round::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 .main {
@@ -57,7 +169,7 @@ h4 {
 }
 
 .section-descrp {
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 
 .button {
@@ -70,12 +182,12 @@ h4 {
   align-items: center;
   display: flex;
   font-size: 14px;
-  color: $white;
-  background-color: $black;
+  color: var(--white-to-black);
+  background-color: var(--black-to-white);
   padding: 10px 10px;
   &:hover {
     background-color: transparent;
-    color: $black;
+    color: var(--black-to-white);
   }
 }
 
@@ -92,8 +204,8 @@ h4 {
   font-size: 14px;
   padding: 10px;
   &:hover {
-    background-color: $black;
-    color: $white;
+    background-color: var(--black-to-white);
+    color: var(--white-to-black);
   }
 }
 
@@ -117,7 +229,7 @@ h4 {
 .block-likes__number {
   font-size: 12px;
   font-weight: 500;
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 
 .block-likes__like {
@@ -133,7 +245,7 @@ h4 {
 }
 
 .stats__text {
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 
 //------ nft
@@ -142,7 +254,7 @@ h4 {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  background-color: $whiteCards;
+  background-color: var(--cards-bg-color);
   gap: 30px;
 }
 
@@ -201,7 +313,7 @@ h4 {
   align-items: center;
   &:hover {
     .card-nft__dot {
-      background-color: $black;
+      background-color: var(--black-to-white);
     }
   }
 }
@@ -221,7 +333,7 @@ h4 {
 
 .card-nft__time-title {
   font-size: 16px;
-  color: $lightGray;
+  color: var(--second-text-color);
 }
 
 .card-nft__time {
@@ -230,7 +342,7 @@ h4 {
 }
 
 .nft-block-price__title {
-  color: $lightGray;
+  color: var(--second-text-color);
   font-size: 16px;
 }
 
@@ -251,7 +363,6 @@ h4 {
 .card-nft__progressbar {
   position: relative;
   transition: ease-in-out 1s;
-  // display: none;
   width: 100%;
   background: #e5e5e5;
   border-radius: 50px;
